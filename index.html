@@ -1,70 +1,435 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>面向情感智能的可解释大模型研究团队</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向情感智能的可解释大模型研究</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        dark: '#1D2129',
+                        light: '#F2F3F5'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-title {
+                position: relative;
+                padding-bottom: 12px;
+            }
+            .section-title::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 40px;
+                height: 3px;
+                background-color: #165DFF;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-b from-gray-50 to-white min-h-screen font-sans text-gray-800">
-  <div class="max-w-4xl mx-auto p-6">
-    <header class="text-center mb-8">
-      <h1 class="text-3xl font-bold">面向情感智能的可解释大模型研究团队</h1>
-      <p class="text-gray-600 mt-2">计算机与信息学院 · 创新活动基地</p>
+<body class="bg-light text-dark font-sans">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 bg-white shadow-sm z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <i class="fa fa-brain text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-dark">情感智能大模型研究</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#project-overview" class="font-medium hover:text-primary transition-colors">项目概况</a>
+                <a href="#team-info" class="font-medium hover:text-primary transition-colors">团队信息</a>
+                <a href="#research-content" class="font-medium hover:text-primary transition-colors">研究内容</a>
+                <a href="#work-plan" class="font-medium hover:text-primary transition-colors">工作计划</a>
+                <a href="#expected-results" class="font-medium hover:text-primary transition-colors">预期成果</a>
+            </nav>
+            <button class="md:hidden text-gray-700">
+                <i class="fa fa-bars text-2xl"></i>
+            </button>
+        </div>
     </header>
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-3">课题简介</h2>
-      <p class="text-gray-700">本团队致力于“面向情感智能的可解释大模型研究”，研究方向包括可解释心理健康大模型与跨文化情感识别。目标是提升人工智能在情感推理和跨文化理解方面的能力，为心理健康服务和多语言应用提供可信解决方案。</p>
+    <!-- 英雄区域 -->
+    <section class="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold mb-6 text-dark">面向情感智能的可解释大模型研究</h1>
+                <p class="text-gray-600 text-lg mb-8">聚焦心理健康与跨文化情感识别，打造可解释、低偏见的情感智能大模型</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">大学生双创基地项目</span>
+                    <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">人工智能与心理学交叉</span>
+                    <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">国家级大创支撑</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-3">核心成员</h2>
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
-        <li><strong>戴崇远</strong> – 负责人（心理推理大模型）</li>
-        <li><strong>徐骁</strong> – 成员（情感智能）</li>
-        <li><strong>夏浩宇</strong> – 成员（技术实现）</li>
-        <li><strong>朱清扬</strong> – 成员（心理健康大模型）</li>
-        <li><strong>高子涵</strong> – 成员（情感智能）</li>
-        <li><strong>黄嘉慧</strong> – 成员（技术支持）</li>
-      </ul>
+    <!-- 项目概况 -->
+    <section id="project-overview" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 section-title">项目概况</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-light p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fa fa-flag text-primary mr-2"></i>研究目标
+                        </h3>
+                        <p class="text-gray-600">针对当前大语言模型在情感智能领域"黑盒"特性及文化偏见问题，构建融合共情、专业知识与推理能力的可解释心理推理大模型，研发自适应跨文化情感识别架构，提升情感智能模型的可信度与公平性。</p>
+                    </div>
+                    <div class="bg-light p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fa fa-map-marker text-primary mr-2"></i>入驻信息
+                        </h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><span class="font-medium">入驻基地：</span>创新活动基地</li>
+                            <li><span class="font-medium">指导教师：</span>胡金鹏（副教授）</li>
+                            <li><span class="font-medium">填表日期：</span>2025年9月20日</li>
+                            <li><span class="font-medium">大创编号：</span>202510359110</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fa fa-book text-primary mr-2"></i>项目背景
+                    </h3>
+                    <p class="text-gray-600 mb-4">随着Transformer架构大语言模型的快速发展，其在情感智能与心智理论评估中展现出卓越能力，尤其在心理健康领域具备普惠服务潜力。然而，"黑盒"模型存在幻觉、有毒建议、数据偏见等风险，且现有模型受西方文化训练数据影响，存在跨文化情感识别偏差。</p>
+                    <p class="text-gray-600">本项目通过两大研究方向解决上述问题：一是构建可解释心理健康大模型，推动情感智能从"模式模仿"向"可信推理"转型；二是研究跨文化情感识别能力，减轻模型文化偏见，提升多语言场景适应性。</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-3">近期工作计划</h2>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>构建并完善心理推理大模型，开发云端平台与应用。</li>
-        <li>开展跨文化多语言情感识别研究，构建跨文化数据集。</li>
-        <li>参加“中国国际大学生创新大赛”和“挑战杯”等赛事，争取省级以上奖项。</li>
-      </ul>
+    <!-- 团队信息 -->
+    <section id="team-info" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 section-title">团队信息</h2>
+                
+                <!-- 负责人信息 -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold mb-6">项目负责人</h3>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="pb-3 font-semibold">姓名</th>
+                                    <th class="pb-3 font-semibold">学院</th>
+                                    <th class="pb-3 font-semibold">学号</th>
+                                    <th class="pb-3 font-semibold">联系方式</th>
+                                    <th class="pb-3 font-semibold">承担岗位</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3">戴崇远</td>
+                                    <td class="py-3">计算机与信息学院</td>
+                                    <td class="py-3">2023217261</td>
+                                    <td class="py-3">
+                                        <p>13202403059</p>
+                                        <p>2023217261@mail.hfut.edu.cn</p>
+                                    </td>
+                                    <td class="py-3">研究</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 团队成员信息 -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold mb-6">核心团队成员</h3>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="pb-3 font-semibold">姓名</th>
+                                    <th class="pb-3 font-semibold">学院</th>
+                                    <th class="pb-3 font-semibold">学号</th>
+                                    <th class="pb-3 font-semibold">手机号</th>
+                                    <th class="pb-3 font-semibold">QQ</th>
+                                    <th class="pb-3 font-semibold">承担岗位</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3">徐骁</td>
+                                    <td class="py-3">计算机与信息学院</td>
+                                    <td class="py-3">2024218726</td>
+                                    <td class="py-3">13058683903</td>
+                                    <td class="py-3">1707297086</td>
+                                    <td class="py-3">研究</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3">夏浩宇</td>
+                                    <td class="py-3">计算机与信息学院</td>
+                                    <td class="py-3">2024218569</td>
+                                    <td class="py-3">13167769727</td>
+                                    <td class="py-3">3368297688</td>
+                                    <td class="py-3">技术</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3">朱清扬</td>
+                                    <td class="py-3">计算机与信息学院</td>
+                                    <td class="py-3">2023212290</td>
+                                    <td class="py-3">15804505800</td>
+                                    <td class="py-3">2226859179</td>
+                                    <td class="py-3">研究</td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-3">高子涵</td>
+                                    <td class="py-3">计算机与信息学院</td>
+                                    <td class="py-3">2024218709</td>
+                                    <td class="py-3">18338564006</td>
+                                    <td class="py-3">469273297</td>
+                                    <td class="py-3">研究</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3">黄嘉慧</td>
+                                    <td class="py-3">计算机与信息学院</td>
+                                    <td class="py-3">2023212418</td>
+                                    <td class="py-3">19719271026</td>
+                                    <td class="py-3">2423878997</td>
+                                    <td class="py-3">技术</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 指导教师信息 -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">指导教师</h3>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="pb-3 font-semibold">姓名</th>
+                                    <th class="pb-3 font-semibold">专业</th>
+                                    <th class="pb-3 font-semibold">职称</th>
+                                    <th class="pb-3 font-semibold">联系电话</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-3">胡金鹏</td>
+                                    <td class="py-3">计算机科学与技术</td>
+                                    <td class="py-3">副教授</td>
+                                    <td class="py-3">18846750631</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="mt-6 p-4 bg-primary/5 rounded-lg">
+                            <h4 class="font-semibold mb-2">指导教师意见</h4>
+                            <p class="text-gray-600 text-sm">本项目选题紧扣当前人工智能与心理学交叉领域的前沿方向，研究内容具有重要的学术意义和应用价值。技术路线总体合理可行，数据构建涵盖心理学教材、真实咨询语料与大模型知识蒸馏，能够保证数据质量与多样性；推理链生成与迭代优化方法结合监督微调与强化学习的混合训练范式，具备较强的可操作性。研究目标明确，预期成果对于推动情感智能大模型的应用具有重要价值，建议予以支持。</p>
+                            <p class="text-right text-gray-500 mt-3 text-sm">签名：胡金鹏 &nbsp;&nbsp;日期：2025年9月20日</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="mb-8 text-center">
-      <h2 class="text-2xl font-semibold mb-3">联系我们</h2>
-      <p class="text-gray-700">负责人：戴崇远<br/>邮箱：2023217261@mail.hfut.edu.cn<br/>电话：13202403059</p>
+    <!-- 研究内容 -->
+    <section id="research-content" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 section-title">研究内容</h2>
+                
+                <!-- 研究方向一：可解释心理推理大模型 -->
+                <div class="mb-12">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fa fa-brain text-primary mr-2"></i>方向一：可解释心理推理大模型
+                    </h3>
+                    <div class="bg-light p-6 rounded-xl mb-6">
+                        <h4 class="font-semibold mb-3">1. 推理导向的数据构建</h4>
+                        <ul class="text-gray-600 space-y-3 list-disc pl-5">
+                            <li><span class="font-medium">多源数据整合：</span>收集心理学教科书、课程资料、考试题库、心理健康平台真实咨询对话数据及大模型蒸馏知识，确保数据权威性与实用性。</li>
+                            <li><span class="font-medium">结构化问答对生成：</span>结合思维链提示（CoT Prompting），引导教师模型生成包含心理学概念识别、分析步骤、最终答案的完整推理链，模拟专家诊断过程。</li>
+                            <li><span class="font-medium">自监督迭代优化：</span>通过提示优化与推理链修正的迭代机制，持续提升推理路径的清晰度、连贯性与逻辑完整性，确保推理准确性。</li>
+                            <li><span class="font-medium">共情对话数据构建：</span>基于真实咨询语料，引导大模型润色重写，融入共情表达技巧，确保循证指导与导向性支持。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-light p-6 rounded-xl">
+                        <h4 class="font-semibold mb-3">2. 混合式训练范式</h4>
+                        <ul class="text-gray-600 space-y-3 list-disc pl-5">
+                            <li><span class="font-medium">数据集划分：</span>通过多架构模型独立作答，将错误率较高的题目归类为"挑战性"样本，用于强化学习；其余为"非挑战性"样本，用于监督微调。</li>
+                            <li><span class="font-medium">监督微调（SFT）：</span>基于"非挑战性"数据、共情对话数据及心理学数据集，训练模型生成包含推理链的完整序列，掌握领域知识与共情回复能力。</li>
+                            <li><span class="font-medium">强化学习（GRPO）：</span>针对"挑战性"样本，采用群体相对策略优化，设计复合奖励函数，确保答案准确性与推理格式结构化，增强复杂场景推理能力。</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 研究方向二：自适应跨文化情感识别 -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fa fa-globe text-primary mr-2"></i>方向二：自适应跨文化情感识别
+                    </h3>
+                    <div class="bg-light p-6 rounded-xl mb-6">
+                        <h4 class="font-semibold mb-3">1. 多语言、多文化VQA情感数据集</h4>
+                        <p class="text-gray-600 mb-3">解决现有VQA数据集西方中心主义偏见，构建全球代表性数据集：</p>
+                        <ul class="text-gray-600 space-y-2 list-disc pl-5">
+                            <li>设计数据蒸馏流程，提供丰富社交场景</li>
+                            <li>招募母语者进行数据标注与验证，确保文化真实性</li>
+                            <li>涵盖饮食、公众人物、建筑等文化生活类别，覆盖文化差异视觉场景</li>
+                        </ul>
+                    </div>
+                    <div class="bg-light p-6 rounded-xl">
+                        <h4 class="font-semibold mb-3">2. 自适应跨文化情感识别架构</h4>
+                        <p class="text-gray-600 mb-3">结合混合专家（MoE）模型架构，实现跨文化情感自适应识别：</p>
+                        <ul class="text-gray-600 space-y-2 list-disc pl-5">
+                            <li>构建多"专家"网络，每个专家学习特定文化集群（如东亚、拉美文化）特征</li>
+                            <li>训练动态路由机制，将输入数据路由到最相关的"专家"，实现稀疏高效计算</li>
+                            <li>通过路由机制揭示推理路径，增强系统透明度与可解释性，减轻文化偏差</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="text-center">
-      <h2 class="text-2xl font-semibold mb-3">扫描二维码查看团队信息</h2>
-      <div id="qrcode" class="flex justify-center"></div>
-      <p class="text-sm text-gray-500 mt-2">提示：请将下面代码中的占位链接换成你部署后生成的 GitHub Pages 地址</p>
+    <!-- 工作计划 -->
+    <section id="work-plan" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 section-title">工作计划</h2>
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="space-y-8">
+                        <!-- 第一阶段 -->
+                        <div class="relative pl-8 border-l-2 border-primary">
+                            <div class="absolute left-[-9px] top-0 w-4 h-4 bg-primary rounded-full"></div>
+                            <h3 class="text-lg font-semibold mb-3">2025年9月 - 2026年3月：模型构建与平台开发</h3>
+                            <ul class="text-gray-600 space-y-2 list-disc pl-5">
+                                <li>构建并完善心理推理大模型，完成核心算法开发</li>
+                                <li>开发PC/移动端一站式平台，实现模型云端部署与高效调用</li>
+                                <li>基于模型开发Agent应用，构建RAG心理健康知识库（必要时）</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 第二阶段 -->
+                        <div class="relative pl-8 border-l-2 border-primary">
+                            <div class="absolute left-[-9px] top-0 w-4 h-4 bg-primary rounded-full"></div>
+                            <h3 class="text-lg font-semibold mb-3">2025年12月 - 2026年3月：跨文化情感识别研究</h3>
+                            <ul class="text-gray-600 space-y-2 list-disc pl-5">
+                                <li>构建大规模跨文化VQA情感数据集，完成数据标注与验证</li>
+                                <li>设计并实现基于MoE的自适应跨文化情感识别架构</li>
+                                <li>完成跨文化情感识别模型训练与性能评估</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 第三阶段 -->
+                        <div class="relative pl-8 border-l-2 border-primary">
+                            <div class="absolute left-[-9px] top-0 w-4 h-4 bg-primary rounded-full"></div>
+                            <h3 class="text-lg font-semibold mb-3">2026年3月 - 2026年8月：成果完善与转化</h3>
+                            <ul class="text-gray-600 space-y-2 list-disc pl-5">
+                                <li>完善现有模型与平台功能，优化性能指标</li>
+                                <li>参加"中国国际大学生创新大赛"、"挑战杯"等高水平赛事，争取省级以上奖项</li>
+                                <li>开展情感智能相关深度研究，产出高水平论文或国家发明专利</li>
+                                <li>完成国家级大创项目结题，争取优秀结题评级</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
-  <script>
-    // TODO: 替换为你 GitHub Pages 部署成功后的实际地址，例如：
-    // const pageUrl = "https://你的用户名.github.io/仓库名/";
-    const pageUrl = "https://your-username.github.io/your-repo/";
+    <!-- 预期成果 -->
+    <section id="expected-results" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8 section-title">预期成果</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- 成果一：学术成果 -->
+                    <div class="bg-light p-6 rounded-xl text-center hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-file-text-o text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">学术成果</h3>
+                        <p class="text-gray-600">在ACL、EMNLP、NAACL等国际高水平期刊或会议上发表论文1篇以上，聚焦情感智能大模型可解释性或跨文化情感识别方向。</p>
+                    </div>
+                    
+                    <!-- 成果二：技术成果 -->
+                    <div class="bg-light p-6 rounded-xl text-center hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-cogs text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">技术成果</h3>
+                        <p class="text-gray-600">构建可解释心理推理大模型及自适应跨文化情感识别模型，开发PC/移动端平台，为公众提供普适的情感计算应用，形成可落地的技术方案。</p>
+                    </div>
+                    
+                    <!-- 成果三：竞赛成果 -->
+                    <div class="bg-light p-6 rounded-xl text-center hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-trophy text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-3">竞赛成果</h3>
+                        <p class="text-gray-600">依托项目研究基础，参加"中国国际大学生创新大赛"、"挑战杯"等高水平赛事，争取获得省级以上奖项，提升项目影响力。</p>
+                    </div>
+                </div>
+                <div class="mt-10 bg-primary/5 p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-4">项目价值</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>学术价值
+                            </h4>
+                            <p class="text-gray-600 text-sm">探索情感智能大模型可解释性方法，填补跨文化情感识别领域研究空白，为人工智能与心理学交叉学科发展提供理论支撑与技术参考。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2 flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>应用价值
+                            </h4>
+                            <p class="text-gray-600 text-sm">开发的可解释心理推理模型可应用于心理健康普惠服务，跨文化情感识别技术可服务于多语言国际交流场景，具有广泛的社会应用前景。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    new QRCode(document.getElementById("qrcode"), {
-      text: pageUrl,
-      width: 240,
-      height: 240,
-      colorDark: "#000000",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H
-    });
-  </script>
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="flex items-center justify-center space-x-2 mb-6">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <i class="fa fa-brain text-white text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold">面向情感智能的可解释大模型研究</span>
+                </div>
+                <p class="text-gray-400 mb-6">计算机与信息学院 · 大学生双创基地入驻项目 · 2025-2026</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fa fa-globe text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 mt-8 text-sm">© 2026 情感智能大模型研究团队. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
