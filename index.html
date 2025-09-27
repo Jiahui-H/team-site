@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>面向情感智能的可解释大模型研究团队</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-white min-h-screen font-sans text-gray-800">
+  <div class="max-w-4xl mx-auto p-6">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold">面向情感智能的可解释大模型研究团队</h1>
+      <p class="text-gray-600 mt-2">计算机与信息学院 · 创新活动基地</p>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3">课题简介</h2>
+      <p class="text-gray-700">本团队致力于“面向情感智能的可解释大模型研究”，研究方向包括可解释心理健康大模型与跨文化情感识别。目标是提升人工智能在情感推理和跨文化理解方面的能力，为心理健康服务和多语言应用提供可信解决方案。</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3">核心成员</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
+        <li><strong>戴崇远</strong> – 负责人（心理推理大模型）</li>
+        <li><strong>徐骁</strong> – 成员（情感智能）</li>
+        <li><strong>夏浩宇</strong> – 成员（技术实现）</li>
+        <li><strong>朱清扬</strong> – 成员（心理健康大模型）</li>
+        <li><strong>高子涵</strong> – 成员（情感智能）</li>
+        <li><strong>黄嘉慧</strong> – 成员（技术支持）</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3">近期工作计划</h2>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>构建并完善心理推理大模型，开发云端平台与应用。</li>
+        <li>开展跨文化多语言情感识别研究，构建跨文化数据集。</li>
+        <li>参加“中国国际大学生创新大赛”和“挑战杯”等赛事，争取省级以上奖项。</li>
+      </ul>
+    </section>
+
+    <section class="mb-8 text-center">
+      <h2 class="text-2xl font-semibold mb-3">联系我们</h2>
+      <p class="text-gray-700">负责人：戴崇远<br/>邮箱：2023217261@mail.hfut.edu.cn<br/>电话：13202403059</p>
+    </section>
+
+    <section class="text-center">
+      <h2 class="text-2xl font-semibold mb-3">扫描二维码查看团队信息</h2>
+      <div id="qrcode" class="flex justify-center"></div>
+      <p class="text-sm text-gray-500 mt-2">提示：请将下面代码中的占位链接换成你部署后生成的 GitHub Pages 地址</p>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+  <script>
+    // TODO: 替换为你 GitHub Pages 部署成功后的实际地址，例如：
+    // const pageUrl = "https://你的用户名.github.io/仓库名/";
+    const pageUrl = "https://your-username.github.io/your-repo/";
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: pageUrl,
+      width: 240,
+      height: 240,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
